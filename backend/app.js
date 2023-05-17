@@ -12,6 +12,7 @@ app.use(express.json());
 
 app.use(cors({
   origin: ['https://openfabric-test-peach.vercel.app'],
+  credentials:true,   
 }));
 
 app.use("/product", productRouter);
