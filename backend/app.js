@@ -1,7 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const allowCors = require('./cors');
-
+const cors = require("cors");
 const app = express();
 
 const { productRouter } = require("./src/routes/product");
@@ -11,9 +10,11 @@ const connectToMongoDB = require("./src/database/db");
 
 app.use(express.json());
 
-app.use("/product", allowCors(productRouter));
+app.use(cors());
 
-app.use("/auth", allowCors(authRouter));
+app.use("/product", productRouter);
+
+app.use("/auth", authRouter);
 
 async function startServer() {
   try {
