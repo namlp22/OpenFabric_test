@@ -12,12 +12,7 @@ app.use(express.json());
 
 app.use(cors());
 
-app.get('/', (req, res) => {
-  res.send('Hey this is my API running 🥳')
-})
-app.options('/*', (_, res) => {
-  res.sendStatus(200);
-});
+
 app.use("/product", productRouter);
 
 app.use("/auth", authRouter);

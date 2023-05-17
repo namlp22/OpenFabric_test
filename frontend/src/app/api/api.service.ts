@@ -6,7 +6,7 @@ import { getTokenFromLocalStorage } from '../../utils/utils';
   providedIn: 'root',
 })
 export class APIService {
-  private apiUrl = 'https://openfabric-test-yt6t.vercel.app';
+  private apiUrl = 'https://backend-openfabric-test.onrender.com';
 
   constructor(private http: HttpClient) {}
 
