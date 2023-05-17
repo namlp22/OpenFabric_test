@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
-const cors = require("cors");
+const allowCors = require('./cors');
+
 const app = express();
 
 const { productRouter } = require("./src/routes/product");
@@ -10,14 +11,9 @@ const connectToMongoDB = require("./src/database/db");
 
 app.use(express.json());
 
-app.use(cors({
-  origin: ['https://openfabric-test-peach.vercel.app'],
-  credentials:true,   
-}));
+app.use("/product", allowCors(productRouter));
 
-app.use("/product", productRouter);
-
-app.use("/auth", authRouter);
+app.use("/auth", allowCors(authRouter));
 
 async function startServer() {
   try {
