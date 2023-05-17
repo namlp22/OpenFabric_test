@@ -1,0 +1,17 @@
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.product-card {
+  max-width: 400px;
+  width: 100%;
+}
+
+.editing-card {
+  max-width: 400px;
+  width: 100%;
+  margin-top: 20px;
+}

@@ -1,0 +1,15 @@
+<div class="product-list-container">
+  <h2>Product List</h2>
+  <mat-list role="list" *ngFor="let product of products">
+    <mat-list-item>
+      <a
+        [routerLink]="'/product-detail/' + product._id"
+        class="detail-container"
+      >
+        <span>{{ product.name }}</span>
+        <span> ${{ product.price }}</span>
+      </a>
+    </mat-list-item>
+  </mat-list>
+</div>
+  

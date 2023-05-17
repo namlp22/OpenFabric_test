@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Create New Product</h2>
+  <form [formGroup]="productForm" class="productForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" required />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Price</mat-label>
+      <input matInput formControlName="price" type="number" required />
+    </mat-form-field>
+    <p>{{ message }}</p>
+    <button mat-raised-button color="primary" (click)="createProduct()">
+      Create
+    </button>
+  </form>
+</div>

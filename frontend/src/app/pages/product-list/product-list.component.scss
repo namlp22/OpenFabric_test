@@ -1,0 +1,22 @@
+.product-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.product-list-container h2 {
+  margin-bottom: 20px;
+}
+.product-list-container .detail-container {
+  width: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+.login-button-container {
+  position: fixed;
+  top: 10%;
+  right: 20%;
+}

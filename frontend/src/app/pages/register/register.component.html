@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="form-container">
+    <h2 style="text-align: center">Register</h2>
+    <mat-form-field>
+      <input
+        matInput
+        required
+        placeholder="Username"
+        type="text"
+        (change)="onUsernameChange($event)"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        required
+        placeholder="Password"
+        type="password"
+        (change)="onPasswordChange($event)"
+      />
+      
+    </mat-form-field>
+    <p>{{ message }}</p>
+    <button mat-raised-button color="primary" (click)="onRegisterClick()">
+      Register
+    </button>
+    <a class="login" routerLink="/login">Login</a>
+  </div>
+</div>

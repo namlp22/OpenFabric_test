@@ -1,0 +1,12 @@
+header {
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    div{ 
+        padding: 20px;
+        a {
+            margin: 12px;
+        }
+    }
+}

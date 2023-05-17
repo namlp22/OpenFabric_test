@@ -1,0 +1,28 @@
+<div class="centered-container">
+  <mat-card class="product-card" *ngIf="!isEditing">
+    <mat-card-content>
+      <div class="product-details">
+        <h1>{{ product.name }}</h1>
+        <h2>Price: {{ product.price }}</h2>
+      </div>
+      <button *ngIf="isLogin" mat-button color="primary" (click)="editProduct()">Edit</button>
+      <button *ngIf="isLogin" mat-button color="primary" (click)="deleteProduct()">Delete</button>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="product-card editing-card" *ngIf="isEditing">
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput placeholder="Product Name" [(ngModel)]="editedProductName">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="number" placeholder="Product Price" [(ngModel)]="editedProductPrice">
+      </mat-form-field>
+      <div>
+        <button mat-raised-button color="primary" (click)="saveChanges()">Save</button>
+        <button mat-button (click)="cancelEdit()">Cancel</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

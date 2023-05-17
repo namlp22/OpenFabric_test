@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .productForm {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 20px;
+}

@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.form-container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.register {
+  font-size: 18px;
+  margin: 12px 0;
+  text-align: right;
+}
+.register:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
