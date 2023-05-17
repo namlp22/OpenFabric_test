@@ -11,7 +11,7 @@ const connectToMongoDB = require("./src/database/db");
 app.use(express.json());
 
 app.use(cors({
-  origin: ['https://openfabric-test-peach.vercel.app/']
+  origin: ['https://openfabric-test-peach.vercel.app'],
 }));
 
 app.use("/product", productRouter);
