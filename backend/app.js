@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const allowCors = require("./cors");
+const cors = require("cors");
 const app = express();
 
 const { productRouter } = require("./src/routes/product");
@@ -10,8 +10,11 @@ const connectToMongoDB = require("./src/database/db");
 
 app.use(express.json());
 
-app.use(allowCors);
+app.use(cors());
 
+app.get('/', (req, res) => {
+  res.send('Hey this is my API running 🥳')
+})
 
 app.use("/product", productRouter);
 
